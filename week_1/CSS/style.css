@@ -1,0 +1,12 @@
+.text-red {
+color:brown;
+}
+.bg-red {
+background: lightblue;
+}
+.ratio-100x100
+{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
