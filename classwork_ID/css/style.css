@@ -1,0 +1,138 @@
+/**{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+
+}
+body{
+    display: flex;
+    justify-content: center;
+}
+.wrapper {
+/*padding: 10px 20px 10px 20px;*/
+/*padding-top: 20px;
+padding-right: 20px;
+padding-bottom: 70px;
+padding-left: 20px;
+border: 1px solid red;
+display: inline-flex;
+margin: 50px;
+}
+
+.wrapper  {
+    display: inline-block;
+   
+    object-fit: cover;
+    object-position: center top;
+    text-align: center;
+    align-items: center;
+    border: 2px solid red;
+
+}
+.profile-left {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+}
+.profile-text {
+    text-align: center;
+    margin-top: 10px; 
+}
+.img{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+.wrapper{
+    
+    border: 1px solid red;
+    display: inline-block;
+    margin: 50px;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    background-color: rgb(76, 206, 200);
+    
+  }*/
+
+  *{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+  }
+  body{
+    background:Black;
+  }
+  .container{
+    background: white;
+
+    width:350px;
+    height:500px;
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    overflow: hidden;
+    border-radius: 10px;
+
+  }
+
+  .circle{
+ width: 500px;
+    height:500px;
+    background-color: rgb(24, 99, 220);
+    /*border-radius: 50%;*/
+    
+  }
+  .bg{
+    position: relative;
+
+    top: 50px;
+    left: -50px;
+  }
+    .circle2{
+    width: 400px;
+    height:400px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    position:relative;
+    top: -300px;
+    left: 25px;
+  }
+  .info{
+    
+    position: absolute;
+    top: 30px;
+    width: 100%;
+    left: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* This centers horizontally */
+    justify-content: center; /* This centers vertically if needed */
+    text-align: center;
+  }
+ 
+  .info img {
+
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border: 3px solid white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 25px;
+    
+  }
+  .info h1{
+    text-align:relative;
+    font-family: "Libre Baskerville", serif;
+    margin-bottom:5px;
+   
+    
+  }
+  .info h3{
+    text-align:relative;
+    font-weight: normal;
+    font-family: "Libre Baskerville", serif;
+   
+  }
