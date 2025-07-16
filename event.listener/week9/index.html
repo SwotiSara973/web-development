@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listener 2</title>
+    <script src="./Music_player/style.css"></script>
+    <style>
+        .d-flex {
+            display: flex;
+        }
+
+        .gap-4 {
+            gap: 16px; /* gap: 16px; from image */
+        }
+
+        .btn {
+            border: 1px solid orange;
+            padding: 8px 12px;
+            border-radius: 0.25rem; /* Added for rounded corners */
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            color: white;
+            background-color: orange;
+        }
+
+        #output {
+            border: 1px solid black;
+            width: 50%; /* from image */
+            height: 300px; /* from image */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px; /* Added some margin for spacing */
+            border-radius: 0.5rem; /* Added for rounded corners */
+        }
+
+        .wrapper {
+            min-height: 100vh; /* from image */
+            width: 100%; /* from image */
+            display: flex; /* from image */
+            flex-direction: column; /* from image */
+            justify-content: center; /* from image */
+            align-items: center; /* from image */
+            gap: 50px; /* from image */
+        }
+    </style>
+</head>
+<body>
+     <nav class="bg-white p-4 flex justify-between items-center shadow-md">
+    <div class="text-xl font-bold">MyWebsite</div>
+    <button id="menu-toggle" class="text-3xl font-bold">&#9776;</button>
+  </nav>
+
+  <!-- Menu Links -->
+  <div id="menu-links" class="hidden bg-white p-4 space-y-2 shadow-md text-right">
+    <a href="#" class="block text-black hover:text-blue-500">Home</a>
+    <a href="#" class="block text-black hover:text-blue-500">About</a>
+    <a href="#" class="block text-black hover:text-blue-500">Services</a>
+    <a href="#" class="block text-black hover:text-blue-500">Contact</a>
+  </div>
+
+    <div class="wrapper">
+        <div id="output" class="bg-gray-200">
+            Output container is
+        </div>
+        <div class="d-flex gap-4">
+            <div id="btn-red" class="btn">Red</div>
+            <div id="btn-yellow" class="btn">Yellow</div>
+            <div id="btn-blue" class="btn">Blue</div>
+            <div id="btn-black" class="btn">Black</div>
+            <div id="btn-calculate" class="btn">Calculate</div>
+        </div>
+    </div>
+
+    <script src="./Music_player/Jscript"></script>
+</body>
+</html>
+

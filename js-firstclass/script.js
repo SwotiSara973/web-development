@@ -94,25 +94,51 @@
 //  }
 // sum(4,9);
 //week 3
-function sum(x, y) {
-    let total = 0;
-    let nums = [x, y];
-    for (let i = 0; i < nums.length; i++) {
-        total += nums[i];
-    }
-    return total;
-}
+// function sum(x, y) {
+//     let total = 0;
+//     let nums = [x, y];
+//     for (let i = 0; i < nums.length; i++) {
+//         total += nums[i];
+//     }
+//     return total;
+// }
 
-console.log(sum(5, 10));
-
-
-
-function printTable(number) {
-
-    for (let i = 1; i <= 10; i++) {
-        console.log(number + " x " + i + " = " + (number * i));
-    }
-}
+// console.log(sum(5, 10));
 
 
-printTable(9); 
+
+// function printTable(number) {
+
+//     for (let i = 1; i <= 10; i++) {
+//         console.log(number + " x " + i + " = " + (number * i));
+//     }
+// }
+
+
+// printTable(9); 
+
+
+let newArr = ['ram', 'hari', 'sita'];
+console.table(newArr);
+console.log(newArr[0]);
+
+//if i want tto add new 
+newArr.push('Ram Bahadur');
+console.table(newArr);
+
+newArr.pop();
+console.table(newArr)
+newArr.pop();
+console.table(newArr);
+console.log (newArr[2]);
+
+
+newArr.shift();
+newArr.unshift('hanuman');
+console.table(newArr);
+console.log(newArr[2]);
+
+
+const main = document.getElementById("main")
+console.log(main)
+inner test \
