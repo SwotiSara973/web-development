@@ -1,58 +1,84 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Music Player</title>
-  <link rel="stylesheet" href="./style.css"/>
+  <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
-  <div class="player-container" tabindex="0">
-    <!-- Left Panel -->
-    <div class="left-panel">
-      <h3 class="now-playing-title">Now Playing</h3>
-      <div class="album-display">
-        <img id="disc" src="./assets/images/disc1.png" alt="Disc" />
-      </div>
-      <div class="song-info">
-        <h2 id="title">Song Title</h2>
-        <p id="artist">Artist Name</p>
-      </div>
-      <div class="controls">
-        <button id="prev" aria-label="Previous" tabindex="0">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" width="24" height="24">
-            <path d="M11 19V5l-9 7 9 7zm2-14v14h2V5h-2z"/>
-          </svg>
-        </button>
-        <button id="play" aria-label="Play/Pause" aria-pressed="false" tabindex="0">
-          <svg id="play-icon" xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" width="24" height="24">
-            <path d="M8 5v14l11-7z"/>
-          </svg>
-          <svg id="pause-icon" xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" width="24" height="24" style="display: none;">
-            <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
-          </svg>
-        </button>
-        <button id="next" aria-label="Next" tabindex="0">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" width="24" height="24">
-            <path d="M13 5v14l9-7-9-7zm-2 0v14H9V5h2z"/>
-          </svg>
-        </button>
-      </div>
-      <div class="progress-container">
-        <span id="current-time">0:00</span>
-        <input type="range" id="progress" min="0" max="100" value="0" tabindex="0">
-        <span id="duration">0:00</span>
-      </div>
-    </div>
 
-    <!-- Right Panel -->
-    <div class="playlist-panel">
-      <div class="playlist-header">Playlist</div>
-      <ul class="playlist" id="playlist"></ul>
-    </div>
+  <nav class="sidebar" aria-label="Main navigation">
+    <button id="btn-home" class="sidebar-btn active" aria-label="Home" tabindex="0">Home</button>
+    <button id="btn-playlist" class="sidebar-btn" aria-label="Playlist" tabindex="0">Playlist</button>
+    <button id="btn-favourites" class="sidebar-btn" aria-label="Favourites" tabindex="0">Favourites</button>
+    <button id="btn-library" class="sidebar-btn" aria-label="Library" tabindex="0">Library</button>
+  </nav>
 
-    <audio id="audio"></audio>
-  </div>
+  <main class="main-content" tabindex="0">
+
+    <!-- Home Screen -->
+    <section id="home-screen" class="screen active" tabindex="0" aria-label="Home screen">
+      <h1>Welcome to Our Music Player</h1>
+      <p>Enjoy your favorite tunes!</p>
+      <h2>Featured Songs</h2>
+      <ul class="featured-list" id="featured-list" aria-label="Featured songs list"></ul>
+    </section>
+
+    <!-- Playlist Screen -->
+    <section id="playlist-screen" class="screen" tabindex="0" aria-label="Playlist screen">
+      <div class="playlist-container">
+        <div class="left-panel">
+          <img id="disc" src="assets/images/disc1.png" alt="Album cover" class="disc" />
+          <h3 id="title">Song Title</h3>
+          <p id="artist">Artist Name</p>
+
+          <div class="controls" role="group" aria-label="Playback controls">
+            <button id="prev" aria-label="Previous song" tabindex="0" class="control-btn">
+              &#9664;&#9664;
+            </button>
+            <button id="play" aria-label="Play" aria-pressed="false" tabindex="0" class="control-btn">
+              <span id="play-icon">&#9654;</span>
+              <span id="pause-icon" style="display:none;">&#10073;&#10073;</span>
+            </button>
+            <button id="next" aria-label="Next song" tabindex="0" class="control-btn">
+              &#9654;&#9654;
+            </button>
+            <button id="fav-toggle" aria-label="Add to Favourites" tabindex="0" class="fav-btn" title="Add to Favourites">
+              &#10084;
+            </button>
+          </div>
+
+          <div class="progress-container" aria-label="Song progress">
+            <span id="current-time">0:00</span>
+            <input type="range" id="progress" min="0" max="100" value="0" tabindex="0" aria-label="Seek song progress" />
+            <span id="duration">0:00</span>
+          </div>
+        </div>
+
+        <div class="right-panel">
+          <h2>Your Playlist</h2>
+          <ul class="playlist-list" id="playlist" aria-label="Playlist songs"></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Favourites Screen -->
+    <section id="favourites-screen" class="screen" tabindex="0" aria-label="Favourites screen">
+      <h2>Your Favourites</h2>
+      <ul class="playlist-list" id="favourites-list" aria-label="Favourites songs"></ul>
+      <p id="no-favs-msg" style="display:none; color:#ccc;">No favourites added yet.</p>
+    </section>
+
+    <!-- Library Screen -->
+    <section id="library-screen" class="screen" tabindex="0" aria-label="Library screen">
+      <h2>Library</h2>
+      <p>This section can be used for future enhancements.</p>
+    </section>
+
+  </main>
+
+  <audio id="audio"></audio>
 
   <script src="./script.js"></script>
 </body>
